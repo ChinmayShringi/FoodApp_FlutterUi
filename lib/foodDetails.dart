@@ -7,6 +7,12 @@ class FoodDetailsPage extends StatefulWidget {
 }
 
 class _FoodDetailsPageState extends State<FoodDetailsPage> {
+  var imgs = [
+    'assets/food.jpg',
+    'assets/pasta.jpg',
+    'assets/balanced.jpg',
+    'assets/sandwich.jpg'
+  ];
   var clrHead = Color.fromRGBO(68, 70, 79, 1);
   @override
   Widget build(BuildContext context) {
@@ -88,17 +94,14 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   Container(
                     padding: EdgeInsets.only(top: 15.0, left: 15.0),
                     height: 160.0,
-                    child: ListView(
-                      shrinkWrap: true,
+                    child: ListView.separated(
+                      itemCount: this.imgs.length,
                       scrollDirection: Axis.horizontal,
-                      children: <Widget>[
-                        _foodCard(size),
-                        SizedBox(width: 10.0),
-                        _foodCard(size),
-                        SizedBox(width: 10.0),
-                        _foodCard(size),
-                        SizedBox(width: 10.0),
-                      ],
+                      itemBuilder: (context, index) {
+                        return _buildFoodCards(size, this.imgs[index]);
+                      },
+                      separatorBuilder: (context, index) =>
+                          SizedBox(width: 10.0),
                     ),
                   )
                 ],
@@ -188,7 +191,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
     );
   }
 
-  Widget _foodCard(var size) {
+  Widget _buildFoodCards(var size, String img) {
     return Container(
       width: size.width / 1.2,
       decoration: BoxDecoration(
@@ -204,8 +207,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
             Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12.0),
-                  image: DecorationImage(
-                      image: AssetImage('assets/balanced.jpg'))),
+                  image: DecorationImage(image: AssetImage(img))),
               height: 125.0,
               width: 100.0,
             ),
