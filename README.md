@@ -1,6 +1,10 @@
-# food_app
+# Food Recipe App Template
 
-A new Flutter project.
+A Flutter template. <a href="https://dribbble.com/shots/5137623-Food-App">Inspiration</a>
+
+
+## Product List
+<img src="assets/ss.png" width="200" height="400"/>
 
 ## Getting Started
 
