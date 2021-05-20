@@ -4,7 +4,7 @@ A Flutter template. <a href="https://dribbble.com/shots/5137623-Food-App">Inspir
 
 
 ## Product List
-<img src="assets/ss.png" width="300" height="800"/>
+<img src="assets/ss.png" width="1500" height="300"/>
 
 ## Getting Started
 
