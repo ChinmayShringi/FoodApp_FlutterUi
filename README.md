@@ -3,7 +3,7 @@
 A Flutter template. <a href="https://dribbble.com/shots/5137623-Food-App">Inspiration</a>
 
 
-## Product List
+## Application UI
 <img src="assets/ss.png" />
 
 ## Getting Started
